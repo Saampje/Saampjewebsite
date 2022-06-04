@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaampjeCreative</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Sam&Diesel.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="center flex between">
+            <a href="index.html" class="logo">
+                <h1>Saampje Creative</h1>
+            </a>
+            <ul class="flex around">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li class="shape flex"><a href="mailto:saampjecreative@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Intro -->
+    <section id="intro">
+        <div class="center flex between">
+            <div class="textbox">
+                <h1>Portfolio</h1>
+                <p>Hey je bent op mij portfolio terecht gekomen, 
+                    <br>hier kun je mijn favorite stukken werk vinden die ik gemaakt heb.
+                    <br>En waar ik het meest trots op ben. Ook heb ik zelf deze website ontworpen en gecodeerd.
+                    <br> <br>Ook vind ik het gaaf om websites te ontwerpen, alleen het coderen is nog wel lastig.
+                </p>
+            </div>
+            <img src="/images/Sam&Diesel.png" alt="" class="samdiesel">
+        </div>
+    </section>
+    <!-- End Intro -->
+
+    <!-- Main -->
+    <section id="main">
+        <div class="center flex">
+            <div class="container flex">
+                <div class="shape three hover">
+                    <h3><a href="portfolio.html#main">Emote Design</a></h3>
+
+                </div>
+                <div class="shape three hover">
+                    <h3><a href="portfolio logo design.html#main">Logo Design</a></h3>
+                </div>
+                <div class="shape three hover">
+                    <h3><a href="portfolio school projecten.html#main">School Projecten</a></h3>
+                </div>
+            </div>
+            <!-- Emote Design slideshow -->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="/images/placeholder.png" alt="">
+                    <div class="text">Placeholder</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/images/placeholder.png" alt="">
+                    <div class="text">Placeholder</div>
+                </div>
+
+
+                <div class="mySlides fade">
+                    <img src="/images/placeholder.png" alt="">
+                    <div class="text">Placeholder</div>
+                </div>
+
+                <a class="prev shape hover" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next shape2 hover2" onclick="plusSlides(1)">&#10095;</a>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <!-- End Emote Design slideshow -->
+        </div>
+    </section>
+
+    <!-- End Main -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="center flex">
+            <div class="socials">
+                <h3>Socials</h3>
+                <ul>
+                    <li><img src="images/Logo Twitter.png" alt=""><a target="_blank"
+                            href="https://twitter.com/RealSaampje">Twitter</a></li>
+                    <li><img src="images/Logo Twitch.png" alt=""><a target="_blank"
+                            href="https://twitch.tv/Saampje">Twitch</a></li>
+                    <li><img src="images/Logo Youtube.png" alt=""><a target="_blank"
+                            href="https://www.youtube.com/channel/UChogU2u0weRbNctVn-iF6MQ">Youtube</a></li>
+                    <li><img src="images/Logo Instagram.png" alt=""><a target="_blank"
+                            href="https://www.instagram.com/realsaampje/">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="contacts">
+                <h3>Contacts</h3>
+                <ul>
+                    <li><img src="images/Logo Discord.png" alt=""><a target="_blank"
+                            href="https://discord.gg/TnuJFpNuud">Discord server</a></li>
+                    <li><img src="images/Logo Mail.png" alt=""><a target="_blank"
+                            href="mailto:saampjecreative@gmail.com">Mail</a></li>
+                </ul>
+            </div>
+            <div class="doodle shape"></div>
+            <div class="copyright flex">
+                <P>Copyright 2022 Saampje Creative ©.</P>
+                <div class="priv flex">
+                    <p>Privacy policy</p>
+                    <p>Terms of use</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script> let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        } </script>
+</body>
+
+</html>
