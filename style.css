@@ -31,7 +31,7 @@ li {
 header {
     background: var(--purple);
     width: 100%;
-    height: 85px;
+    min-height: 85px;
 }
 
 header * {
@@ -136,7 +136,7 @@ header ul .shape a {
 
 #main {
     background: var(--darkgrey);
-    height: 1200px;
+    padding-bottom: 200px;
     width: 100%;
 }
 
@@ -161,6 +161,7 @@ header ul .shape a {
     width: 90px;
     text-align: center;
 }
+
 #main .shape a {
     background: none;
 }
@@ -308,6 +309,8 @@ header ul .shape a {
 
 
 
+
+
 /* End Slideshow */
 
 /* Footer */
@@ -348,7 +351,9 @@ footer .doodle {
     height: 285px;
     width: 525px;
     background: var(--grey);
+    margin-bottom: 20px;
 }
+
 
 footer .center {
     justify-content: space-between;
@@ -366,5 +371,131 @@ footer .priv {
     width: 330px;
     justify-content: space-between;
     margin-right: 195px;
-    margin-top: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    header .center {
+        flex-wrap: wrap;
+    }
+
+    header .hamburger {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .hamburger * {
+        width: 35px;
+        height: 5px;
+        background-color: var(--darkgrey);
+        margin-bottom: 5px;
+    }
+
+    header .hamburger.clicked .bar2 {
+        opacity: 0;
+    }
+
+    header .hamburger.clicked .bar1 {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    header .hamburger.clicked .bar3 {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header ul.flex.around.open {
+        display: block;
+    }
+
+    header ul.flex.around {
+        display: none;
+        width: 100vw;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header ul.flex.around .shape {
+        display: none;
+    }
+
+    header li {
+        padding-bottom: 5px;
+    }
+
+    footer .center {
+        padding: 40px 40px 0;
+        justify-content: space-around;
+    }
+
+    footer .doodle {
+        display: none;
+    }
+
+    footer .copyright {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    p, a {
+        font-size: 18px;
+    }
+
+    header .center {
+        padding: 0 40px;
+    }
+
+    #intro {
+        height: 400px;
+    }
+
+    #intro .center {
+        padding: 40px 40px 0;
+    }
+
+    #main {
+        padding: 0 40px 200px;
+    }
+
+    #main .shape {
+        padding: 5px;
+    }
+
+    #main h2 {
+        margin-bottom: 40px;
+        width: 270px;
+    }
+
+    #main a.shape {
+        width: 110px;
+    }
+
+    #main a.prev.shape {
+        width: 90px;
+    }
+
+    #main img {
+        width: 85vw;
+
+    }
+
+    #main .container-am {
+        flex-direction: column;
+    }
+
+    #main .container-am h3 {
+        padding-top: 60px;
+    }
+
+    #main .container-am .shape {
+        margin-bottom: 60px;
+    }
+
+    footer .center {
+        padding: 40px 40px 0;
+    }
+
 }
