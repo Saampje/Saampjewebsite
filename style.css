@@ -499,3 +499,12 @@ footer .priv {
     }
 
 }
+@media screen and (max-width: 600px) {
+    p, a {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
